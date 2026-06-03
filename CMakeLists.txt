@@ -38,7 +38,7 @@ endif()
 add_library(${BUILD_TARGET} ${TINYEXR_SOURCES} ${TINYEXR_DEP_SOURCES})
 add_sanitizers(${BUILD_TARGET})
 
-target_include_directories(${BUILD_TARGET} PRIVATE ${PROJECT_SOURCE_DIR})
+target_include_directories(${BUILD_TARGET} PUBLIC ${PROJECT_SOURCE_DIR})
 target_link_libraries(${BUILD_TARGET} ${TINYEXR_EXT_LIBRARIES} ${CMAKE_DL_LIBS})
 
 # Increase warning level for clang.
